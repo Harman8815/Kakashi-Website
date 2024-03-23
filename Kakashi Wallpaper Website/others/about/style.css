@@ -1,0 +1,240 @@
+/* ************************************* about ************************************************** */
+h1 {
+    /* z-index: 1025; */
+    font-family: 'Jakosta-PersonalUse', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    letter-spacing: 0.4rem;
+    transform: scale(2.5);
+    text-align: center;
+    color: #ff0000;
+}
+
+.about {
+    position: relative;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 72vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.vl {
+    margin-top: 25px;
+    margin-left: 5px;
+    border-left: 2px solid rgb(255, 255, 255);
+    height: 452px;
+}
+
+
+hr {
+    margin-top: 18px;
+    margin-left: 25px;
+    width: 455px;
+}
+
+.container {
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.container .left {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+}
+
+.container .container1 {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .left .container1 img {
+    height: 200px;
+    width: 200px;
+    border-radius: 1rem;
+    margin-top: -1rem;
+}
+
+.font1mainh1 {
+    margin: 0;
+    margin-top: 1rem;
+    max-width: fit-content;
+    display: inline;
+    font-family: 'OnsenJapanDemoRegular';
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    color: #ff0000;
+}
+
+.font1main {
+    margin-left: 1rem;
+    max-width: fit-content;
+    display: inline;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0rem;
+    line-height: 1.6rem;
+    color: #ff0000;
+}
+
+p>span {
+    max-width: fit-content;
+    display: inline;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.container .left .container2 {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.container .left .container2 ul {
+    list-style-type: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.container .left .container2 ul>li {
+    margin-left: 2rem;
+    font-weight: 100;
+}
+
+.container .right {
+    margin-left: 1rem;
+    width: 50vw;
+    height: 65vh;
+    border-radius: 1rem;
+    background-color: #332b9621;
+    backdrop-filter: blur(10px);
+}
+
+.container .right .about_content {
+
+    padding: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 61vh;
+    color: whitesmoke;
+    margin: 0 0 12px;
+}
+
+.container .right .about_content .info h2,
+h3 {
+    color: red;
+
+    font-family: 'OnsenJapanDemoRegular';
+}
+
+.container .right .about_content .info p {
+    padding: 1rem 1rem;
+    font-family: rubik, helvetica, arial, sans-serif;
+    color: whitesmoke;
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1.75;
+    margin: 0 0 12px;
+    overflow-wrap: break-word;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    background-color: #00000000;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 0;
+    bottom: 0;
+}
+
+.containers {
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .about {
+        backdrop-filter: blur(10px);
+        width: 89vw;
+        height: 80vh;
+        border-radius: 2rem;
+        margin: 1rem 0.5rem;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .vl {
+        display: none;
+    }
+
+
+    hr {
+        margin-left: -6px;
+        width: 315px;
+    }
+
+    .container {
+        padding: 1rem 0.5rem;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .left {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .container .container1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .left .container1 img {
+        margin-bottom: 2rem;
+    }
+
+
+    .font1main {
+        margin-left: 0;
+    }
+
+    .container .left .container2 {position: relative;
+        top: 0px;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .container .left .container2 ul>li {
+        margin-left: 1rem;
+    }
+
+    .container .right {
+        margin-left: 0.5rem;
+        width: 82vw;
+    }
+
+    .container .right .about_content {
+
+        padding: 0.3rem;
+    }
+}

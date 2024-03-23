@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <section>
+
+    </section>
+
+    <div class="main tilt">
+        <div class="content">
+            <nav>
+                <div class="logo">
+                    <img src="/assets/icons/kickstarter.svg" alt="">
+                    <span class="heading">Kakashi</span>
+                </div>
+                <div class="righter">
+                    <div id="nav_button"><button><img src="./assets/icons/bars-solid.svg" alt=""></button></div>
+                    <div class="right">
+
+                        <a href="#" style="color: yellow;">Home</a>
+                        <a href="/others/skills/index.html">Skills</a>
+                        <a href="/others/img gallery/index.html">Img Gallery</a>
+                        <a href="/others/attacks/index.html">Attacks</a>
+                        <a href="/others/about/index.html">About</a>
+                    </div>
+                </div>
+
+            </nav>
+            <video src="./assets/Kakashi.webm" autoplay loop muted id="bgvideo"></video>
+        </div>
+        <div class="quote">
+            <p><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kakashi Anime website by Harman.</p>
+        </div>
+    </footer>
+
+</body>
+<script src="./script.min.js"></script>
+<script src="./tilt.min.js"></script>
+<script src="./typing.min.js"></script>
+
+<script>
+    const a = document.querySelectorAll(".right a");
+    const timeline = gsap.timeline();
+    if (!window.matchMedia("(max-width: 600px)").matches) {
+        timeline.staggerTo(a, 1, { y: 100, ease: "power2.out" }, 0.5);
+    }
+    else {
+        timeline.staggerTo(a, 1, { x: -120, ease: "power2.out" }, 0.5);
+    }
+    timeline.play();
+</script>
+
+</html>

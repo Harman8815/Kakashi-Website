@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="/main.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <section>
+    </section>
+
+    <div class="main tilt">
+        <div class="content">
+            <nav>
+                <div class="logo">
+                    <img src="/assets/icons/kickstarter.svg" alt="">
+                    <span class="heading">Kakashi</span>
+                </div>
+                <div class="righter">
+                    <div id="nav_button"><button><img src="/assets/icons/bars-solid.svg" alt=""></button></div>
+                    <div class="right">
+
+                        <a href="/index.html" >Home</a>
+                        <a href="/others/skills/index.html">Skills</a>
+                        <a href="#" style="color: yellow;">Img Gallery</a>
+                        <a href="/others/attacks/index.html">Attacks</a>
+                        <a href="/others/about/index.html">About</a>
+                    </div>
+                </div>
+
+            </nav>
+
+            <video src="/assets/Kakashi.webm" autoplay loop muted id="bgvideo"></video>
+
+        </div>
+        <div class="Image_Gallery">
+            <h1>Gallery</h1>
+            <div class="gallery">
+                <span style="--i:1">
+                    <img src="/assets/img gallery/419392.webp" alt="" />
+                </span>
+                <span style="--i:2">
+                    <img src="/assets/img gallery/419443.webp" alt="" />
+                </span>
+                <span style="--i:3">
+                    <img src="/assets/img gallery/472690.webp" alt="" />
+                </span>
+                <span style="--i:4">
+                    <img src="/assets/img gallery/472889.webp" alt="" />
+                </span>
+                <span style="--i:5">
+                    <img src="/assets/img gallery/484955.webp" alt="" />
+                </span>
+                <span style="--i:6">
+                    <img src="/assets/img gallery/518286.webp" alt="" />
+                </span>
+                <span style="--i:7">
+                    <img src="/assets/img gallery/518289.webp" alt="" />
+                </span>
+                <span style="--i:8">
+                    <img src="/assets/img gallery/518291.webp" alt="" />
+                </span>
+                <span style="--i:9">
+                    <img src="/assets/img gallery/518292.webp" alt="" />
+                </span>
+                <span style="--i:10">
+                    <img src="/assets/img gallery/518295.webp" alt="" />
+                </span>
+                <span style="--i:11">
+                    <img src="/assets/img gallery/24794.webp" alt="" />
+                </span>
+                <span style="--i:12">
+                    <img src="/assets/img gallery/518312.webp" alt="" />
+                </span>
+                <span style="--i:13">
+                    <img src="/assets/img gallery/518316.webp" alt="" />
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="containers">
+            <p>&copy; 2024 Kakashi Anime website by Harman.</p>
+        </div>
+    </footer>
+</body>
+<script src="/script.min.js"></script>
+<script src="/tilt.min.js"></script>
+<script>
+    const a = document.querySelectorAll(".right a");
+    const timeline = gsap.timeline();
+    if (!window.matchMedia("(max-width: 600px)").matches) {
+        timeline.staggerTo(a, 1, { y: 100, ease: "power2.out" }, 0.5);
+    }
+    else {
+        timeline.staggerTo(a, 1, { x: -120, ease: "power2.out" }, 0.5);
+    }
+    timeline.play();
+
+
+</script>
+</html>

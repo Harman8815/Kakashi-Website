@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/main.min.css">
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <section></section>
+
+    <div class="main tilt">
+        <div class="content">
+            <nav>
+                <div class="logo">
+                    <img src="/assets/icons/kickstarter.svg" alt="">
+                    <span class="heading">Kakashi</span>
+                </div>
+                <div class="righter">
+                    <div id="nav_button"><button><img src="/assets/icons/bars-solid.svg" alt=""></button></div>
+                    <div class="right">
+
+                        <a href="/index.html">Home</a>
+                        <a href="#" style="color: yellow;">Skills</a>
+                        <a href="/others/img gallery/index.html">Img Gallery</a>
+                        <a href="/others/attacks/index.html">Attacks</a>
+                        <a href="/others/about/index.html">About</a>
+                    </div>
+                </div>
+
+            </nav>
+
+            <video src="/assets/Kakashi.webm" autoplay loop muted id="bgvideo"></video>
+        </div>
+        <div class="attack">
+            <h1>Skills</h1>
+            <div class="attack_container">
+                <div class="container">
+                    <div class="nft">
+                        <div class="mainer">
+                            <img class="tokenImage" src="/assets/skills/ninjutsu.webp" alt="Ninjutsu" />
+                            <h2>NinJutsu</h2>
+                            <p class="description">
+                                Kakashi's diverse ninjutsu arsenal includes elemental techniques
+                                and the iconic Chidori, showcasing his versatility and combat
+                                adaptability.
+                            </p>
+
+                            <hr />
+                            <div class="button">
+                                <button><a href="#">Know More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nft">
+                        <div class="mainer">
+                            <img class="tokenImage" src="/assets/skills/genjutsu.webp" alt="genjutsu" />
+                            <h2>GenJutsu</h2>
+                            <p class="description">
+                                Kakashi employs illusionary techniques with finesse,
+                                manipulating opponents' senses and creating strategic advantages
+                                in battle.
+                            </p>
+                            <hr />
+                            <div class="button">
+                                <button><a href="#">Know More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nft">
+                        <div class="mainer">
+                            <img class="tokenImage" src="/assets/skills/taijutsu.webp" alt="taiJustsu" />
+                            <h2>TaiJustu</h2>
+                            <p class="description">
+                                Kakashi's agility and strength complement his martial arts
+                                prowess, enabling swift and powerful close-quarters combat
+                                techniques.
+                            </p>
+                            <hr />
+                            <div class="button">
+                                <button><a href="#">Know More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nft">
+                        <div class="mainer">
+                            <img class="tokenImage" src="/assets/skills/kenjutsu.webp" alt="KenJustu" />
+                            <h2>KenJustus</h2>
+                            <p class="description">
+                                Kakashi wields a ninjato with precision, demonstrating mastery
+                                in swordsmanship, enhancing his combat effectiveness.
+                            </p>
+                            <hr />
+                            <div class="button">
+                                <button><a href="#">Know More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br /><br />
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="containers">
+            <p>&copy; 2024 Kakashi Anime website by Harman.</p>
+        </div>
+    </footer>
+</body>
+<script src="/script.min.js"></script>
+<script src="/tilt.min.js"></script>
+<script>
+    
+    const a = document.querySelectorAll(".right a");
+    const timeline = gsap.timeline();
+    if (!window.matchMedia("(max-width: 600px)").matches) {
+        timeline.staggerTo(a, 1, { y: 100, ease: "power2.out" }, 0.5);
+    }
+    else {
+        timeline.staggerTo(a, 1, { x: -120, ease: "power2.out" }, 0.5);
+    }
+    timeline.play();
+    const cards = document.querySelectorAll(".nft");
+    const timeline2 = gsap.timeline();
+    timeline2.staggerTo(cards, 1, { y: 500, ease: "power2.out" }, 0.5);
+    timeline2.play();
+
+
+</script>
+
+</html>

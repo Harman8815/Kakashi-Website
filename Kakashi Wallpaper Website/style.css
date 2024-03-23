@@ -1,0 +1,69 @@
+
+.main .content::before {
+    -webkit-animation: shine 1s;
+    animation: shine 3s infinite;
+}
+.quote {
+    position: relative;
+    margin-top: 50vh;
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote p {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+    user-select: none;
+}
+
+.quote p span.typed-text {
+    font-weight: normal;
+    color: #ff6600;
+}
+
+.quote p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+.quote p span.cursor.typing {
+    animation: none;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ccc;
+    }
+
+    49% {
+        background-color: #ccc;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #ccc;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
+.quote p span.typed-text {
+    font-size: 0.9rem;
+}
+}
